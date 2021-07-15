@@ -19,14 +19,15 @@ public class FormMaker extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        System.out.println("[FormMaker] - Plugin allumé.");
+
         instance = this;
         this.saveDefaultConfig();
-        System.out.println("[FormMaker] - Plugin allumé.");
         getCommand("util").setExecutor(new ItemCommand());
         getCommand("set").setExecutor(new SetCommand());
 
         PluginManager pluginManager = Bukkit.getPluginManager();
-        pluginManager.registerEvents(new OnClickListener(), this);
+        pluginManager.registerEvents(new OnClick(), this);
     }
 
     public static FormMaker getInstance() {
