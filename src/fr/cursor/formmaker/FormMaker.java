@@ -26,7 +26,7 @@ public class FormMaker extends JavaPlugin {
         getCommand("set").setExecutor(new SetCommand());
 
         PluginManager pluginManager = Bukkit.getPluginManager();
-        pluginManager.registerEvents(new OnClick(), this);
+        pluginManager.registerEvents(new OnClickListener(), this);
     }
 
     public static FormMaker getInstance() {
