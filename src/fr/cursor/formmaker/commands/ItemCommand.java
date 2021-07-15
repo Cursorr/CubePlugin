@@ -2,7 +2,6 @@ package fr.cursor.formmaker.commands;
 
 import fr.cursor.formmaker.FormMaker;
 import fr.cursor.formmaker.utils.ItemBuilder;
-import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,13 +15,13 @@ public class ItemCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        FormMaker formMaker = FormMaker.getInstance();
+        final FormMaker formMaker = FormMaker.getInstance();
         if (!(sender instanceof Player)) {
             System.out.println(formMaker.getPath("notConnectedToServer"));
             return false;
         }
-        Player player = (Player) sender;
-        ItemStack formItem = new ItemBuilder(Material.DIAMOND_PICKAXE, 1)
+        final Player player = (Player) sender;
+        final ItemStack formItem = new ItemBuilder(Material.DIAMOND_PICKAXE, 1)
                 .setName(formMaker.getPath("item.name"))
                 .addEnchantment(Enchantment.ARROW_FIRE, 1)
                 .addItemFlags(ItemFlag.HIDE_ENCHANTS)
