@@ -1,0 +1,9 @@
+item:
+  name: "&2&l[&a&lThe Handler&2&l]"
+
+command:
+  setBlock: "&d&l%place% position was set at %X%x, %Y%y, %Z%z"
+
+notConnectedToServer: "You should be connected to the server to execute this command."
+wrongGameMode: "&4&l[&c&lYour gamemode should be creative to use this item.&4&l]"
+locationsNotFound: "&4&l[&c&lYou can't set a form because you didn't specified a region. Do it like &4&l/item ]"
