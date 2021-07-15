@@ -11,7 +11,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class OnClick implements Listener {
+public class OnClickListener implements Listener {
 
     @EventHandler
     public void onClick(PlayerInteractEvent event) {
