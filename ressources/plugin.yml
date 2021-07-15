@@ -1,4 +1,4 @@
-name: helpJobs
+name: FormMaker
 author: Cursor
 main: fr.cursor.formmaker.FormMaker
 version: 1.0.0
