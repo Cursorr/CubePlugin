@@ -15,9 +15,9 @@ public class OnClickListener implements Listener {
 
     @EventHandler
     public void onClick(PlayerInteractEvent event) {
-        FormMaker formMaker = FormMaker.getInstance();
-        ItemStack clickedItem = event.getItem();
-        Player player = event.getPlayer();
+        final FormMaker formMaker = FormMaker.getInstance();
+        final ItemStack clickedItem = event.getItem();
+        final Player player = event.getPlayer();
 
         if (event.getClickedBlock() == null || event.getAction() == null || clickedItem == null || !(clickedItem.toString().contains("The Handler")))
             return;
@@ -27,9 +27,9 @@ public class OnClickListener implements Listener {
             return;
         }
         event.setCancelled(true);
-        Block clickedBlock = event.getClickedBlock();
+        final Block clickedBlock = event.getClickedBlock();
         String position = "None";
-        Location blockLocation = clickedBlock.getLocation();
+        final Location blockLocation = clickedBlock.getLocation();
         if (event.getAction().equals(Action.LEFT_CLICK_BLOCK)) {
             position = "First";
             formMaker.setFirstLocation(player, blockLocation);
@@ -37,7 +37,6 @@ public class OnClickListener implements Listener {
             position = "Second";
             formMaker.setSecondLocation(player, blockLocation);
         }
-        System.out.println(formMaker.getFirstLocation(player));
 
         player.sendMessage(formMaker.getPath("command.setBlock").replace("%place%", position)
                 .replace("%X%", Integer.toString(blockLocation.getBlockX()))
