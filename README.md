@@ -1,2 +1,2 @@
 # CubePlugin
-A plugin plugin i made in 1 hour...
+My first minecraft plugin i made in 1 hour.
